@@ -14,14 +14,13 @@ public class Item : MonoBehaviour, IPointerClickHandler
     public GameObject model1;
     public GameObject model2;
 
-    private int modelNumber;
     // Start is called before the first frame update
     void Start()
     {
         sprite = Resources.Load<Sprite>(name);
         image.sprite = sprite;
 
-        modelNumber = 1;
+        UIScript.num = 1;
         model1.SetActive(true);
         model2.SetActive(false);
         
@@ -39,7 +38,7 @@ public class Item : MonoBehaviour, IPointerClickHandler
     {
         Debug.Log("click");
         //ChangeModel();
-        ModelSwitch();
+        UIScript.ModelSwitch();
         //ScrollController.curObj = name;
         //spawnableObject = newObject;
     }
@@ -63,20 +62,4 @@ public class Item : MonoBehaviour, IPointerClickHandler
             currentModel = thisModel;
         }
     }*/
-
-    void ModelSwitch()
-    {
-        if (modelNumber == 1)
-        {
-            model1.SetActive(false);
-            model2.SetActive(true);
-            modelNumber = 2;
-        }
-        else if (modelNumber == 2)
-        {
-            model2.SetActive(false);
-            model1.SetActive(true);
-            modelNumber = 1;
-        }
-    }
 }

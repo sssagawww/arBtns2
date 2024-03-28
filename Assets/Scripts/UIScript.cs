@@ -10,6 +10,8 @@ public class UIScript : MonoBehaviour
     private bool canRotate;
     public GameObject Object;
     string path;
+    public static int num;
+    public static GameObject[] objects;
     //private MeshRenderer mRenderer;
     //private ImageTargetBehaviour imageTarget;
     //private DefaultObserverEventHandler eventHandler;
@@ -63,5 +65,21 @@ public class UIScript : MonoBehaviour
     public void Hide()
     {            
         Object.SetActive(!Object.activeSelf);
+    }
+
+    public static void ModelSwitch()
+    {
+        if (num == 1)
+        {
+            objects[num-1].SetActive(false);
+            objects[num].SetActive(true);
+            num = 2;
+        }
+        else if (num == 2)
+        {
+            objects[num].SetActive(false);
+            objects[num-1].SetActive(true);
+            num = 1;
+        }
     }
 }
