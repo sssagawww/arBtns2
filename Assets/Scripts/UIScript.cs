@@ -10,9 +10,9 @@ public class UIScript : MonoBehaviour
     private bool canRotate;
     public GameObject Object;
     string path;
-    public MeshRenderer mRenderer;
-    public ImageTargetBehaviour imageTarget;
-    private DefaultObserverEventHandler eventHandler;
+    //private MeshRenderer mRenderer;
+    //private ImageTargetBehaviour imageTarget;
+    //private DefaultObserverEventHandler eventHandler;
 
     void Start()
     {
@@ -35,11 +35,11 @@ public class UIScript : MonoBehaviour
         {
             if (btn.ToUpper().Equals("X"))
             {
-                transform.Rotate(Vector3.right * 10);
+                Object.transform.Rotate(Vector3.right * 10);
             }
             if (btn.ToUpper().Equals("Y"))
             {
-                transform.Rotate(Vector3.up * 10);
+                Object.transform.Rotate(Vector3.up * 10);
             }
         }
     }
@@ -61,10 +61,7 @@ public class UIScript : MonoBehaviour
     }
 
     public void Hide()
-    {
-        if (Object.isStatic)
-        {
-            Object.SetActive(true);
-        }
+    {            
+        Object.SetActive(!Object.activeSelf);
     }
 }
