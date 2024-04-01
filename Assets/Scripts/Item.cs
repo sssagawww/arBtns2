@@ -6,24 +6,12 @@ using UnityEngine.EventSystems;
 
 public class Item : MonoBehaviour, IPointerClickHandler
 {
-    public string name;
-    private Sprite sprite;
-    public Image image;
-    private Mesh combinedMesh;
-
-    public GameObject model1;
-    public GameObject model2;
+    public int itemNum;
+    public Content content;
 
     // Start is called before the first frame update
     void Start()
-    {
-        sprite = Resources.Load<Sprite>(name);
-        image.sprite = sprite;
-
-        UIScript.num = 1;
-        model1.SetActive(true);
-        model2.SetActive(false);
-        
+    {        
         /*currentModel = Instantiate(model1, transform.position, transform.rotation) as GameObject;
         currentModel.transform.parent = transform;*/
     }
@@ -38,7 +26,8 @@ public class Item : MonoBehaviour, IPointerClickHandler
     {
         Debug.Log("click");
         //ChangeModel();
-        UIScript.ModelSwitch();
+        content.setNum(itemNum);
+        content.switchModel();
         //ScrollController.curObj = name;
         //spawnableObject = newObject;
     }

@@ -423,8 +423,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1230557090}
   m_HandleRect: {fileID: 1230557089}
   m_Direction: 0
-  m_Value: 0.5
-  m_Size: 0.57803476
+  m_Value: 0.5000001
+  m_Size: 0.5780347
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -625,6 +625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: New Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5414522123352844518, guid: 695ddaddbcd73064ab9a792a4f48dc91, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -733,6 +737,7 @@ GameObject:
   - component: {fileID: 901281656}
   - component: {fileID: 901281658}
   - component: {fileID: 901281657}
+  - component: {fileID: 901281659}
   m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
@@ -779,7 +784,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 2e63b660810e8784b807a77cabdf6547, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -797,6 +802,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901281655}
   m_CullTransparentMesh: 1
+--- !u!114 &901281659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901281655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df4305274f227b4cb1a38a4d8b2f594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemNum: 1
+  content: {fileID: 1395804483}
 --- !u!1 &985815441
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,6 +1052,7 @@ GameObject:
   - component: {fileID: 1048767816}
   - component: {fileID: 1048767818}
   - component: {fileID: 1048767817}
+  - component: {fileID: 1048767819}
   m_Layer: 5
   m_Name: Image (2)
   m_TagString: Untagged
@@ -1079,7 +1099,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 2e63b660810e8784b807a77cabdf6547, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1097,6 +1117,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048767815}
   m_CullTransparentMesh: 1
+--- !u!114 &1048767819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048767815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df4305274f227b4cb1a38a4d8b2f594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemNum: 2
+  content: {fileID: 1395804483}
 --- !u!1 &1076995901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1108,6 +1142,7 @@ GameObject:
   - component: {fileID: 1076995902}
   - component: {fileID: 1076995904}
   - component: {fileID: 1076995903}
+  - component: {fileID: 1076995905}
   m_Layer: 5
   m_Name: Image (4)
   m_TagString: Untagged
@@ -1154,7 +1189,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 2e63b660810e8784b807a77cabdf6547, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1172,6 +1207,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076995901}
   m_CullTransparentMesh: 1
+--- !u!114 &1076995905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076995901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df4305274f227b4cb1a38a4d8b2f594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemNum: 4
+  content: {fileID: 1395804483}
 --- !u!1 &1110472962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,7 +1232,7 @@ GameObject:
   - component: {fileID: 1110472966}
   - component: {fileID: 1110472965}
   - component: {fileID: 1110472964}
-  - component: {fileID: 1110472963}
+  - component: {fileID: 1110472967}
   m_Layer: 0
   m_Name: ImageTarget
   m_TagString: Untagged
@@ -1191,25 +1240,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1110472963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1110472962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1110472965}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: Android
-  mDatasetName: 
-  mCastedBehaviour: {fileID: 1110472965}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1110472964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1269,18 +1299,18 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Android
+  mTrackableName: kvantLogo
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1.1741683
+  mAspectRatio: 0.66533065
   mImageTargetType: 3
-  mWidth: 0.17033333
-  mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 2e63b660810e8784b807a77cabdf6547, type: 3}
+  mWidth: 0.2
+  mHeight: 0.13306613
+  mRuntimeTexture: {fileID: 2800000, guid: f2b335a3ed384de4cadce14141bf7052, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1110472963}
+  mPreview: {fileID: 1110472967}
 --- !u!4 &1110472966
 Transform:
   m_ObjectHideFlags: 0
@@ -1298,6 +1328,25 @@ Transform:
   - {fileID: 800333836}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1110472967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110472962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1110472965}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: kvantLogo
+  mDatasetName: 
+  mCastedBehaviour: {fileID: 1110472965}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1153715731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,6 +1635,7 @@ GameObject:
   - component: {fileID: 1395804481}
   - component: {fileID: 1395804480}
   - component: {fileID: 1395804482}
+  - component: {fileID: 1395804483}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -1606,6 +1656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Object: {fileID: 1798905723}
+  content: {fileID: 1395804483}
 --- !u!4 &1395804481
 Transform:
   m_ObjectHideFlags: 0
@@ -1633,6 +1684,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb53ef36a7464842b6c249c0f9862db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BtnPanel: {fileID: 0}
+  instructionPanel: {fileID: 0}
+--- !u!114 &1395804483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395804479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184120f1b565f674ca9ac14b32f777e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 1798905723}
+  - {fileID: 800333835}
+  - {fileID: 800333835}
+  - {fileID: 800333835}
+  - {fileID: 800333835}
 --- !u!1 &1720324776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1691,7 +1762,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 2e63b660810e8784b807a77cabdf6547, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1721,10 +1792,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3df4305274f227b4cb1a38a4d8b2f594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: android
-  image: {fileID: 1720324778}
-  model1: {fileID: 1798905723}
-  model2: {fileID: 800333835}
+  itemNum: 0
+  content: {fileID: 1395804483}
 --- !u!1 &1782333477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1736,6 +1805,7 @@ GameObject:
   - component: {fileID: 1782333478}
   - component: {fileID: 1782333480}
   - component: {fileID: 1782333479}
+  - component: {fileID: 1782333481}
   m_Layer: 5
   m_Name: Image (3)
   m_TagString: Untagged
@@ -1782,7 +1852,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 2e63b660810e8784b807a77cabdf6547, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1800,6 +1870,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782333477}
   m_CullTransparentMesh: 1
+--- !u!114 &1782333481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782333477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df4305274f227b4cb1a38a4d8b2f594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemNum: 3
+  content: {fileID: 1395804483}
 --- !u!1001 &1798905721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1904,7 +1988,7 @@ GameObject:
   - component: {fileID: 1809697151}
   - component: {fileID: 1809697152}
   m_Layer: 5
-  m_Name: Toggle
+  m_Name: Show/HideBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

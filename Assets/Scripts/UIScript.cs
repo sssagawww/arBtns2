@@ -10,8 +10,7 @@ public class UIScript : MonoBehaviour
     private bool canRotate;
     public GameObject Object;
     string path;
-    public static int num;
-    public static GameObject[] objects;
+    public Content content;
     //private MeshRenderer mRenderer;
     //private ImageTargetBehaviour imageTarget;
     //private DefaultObserverEventHandler eventHandler;
@@ -37,11 +36,11 @@ public class UIScript : MonoBehaviour
         {
             if (btn.ToUpper().Equals("X"))
             {
-                Object.transform.Rotate(Vector3.right * 10);
+                content.items[content.getNum()].transform.Rotate(Vector3.right * 10);
             }
             if (btn.ToUpper().Equals("Y"))
             {
-                Object.transform.Rotate(Vector3.up * 10);
+                content.items[content.getNum()].transform.Rotate(Vector3.up * 10);
             }
         }
     }
@@ -63,11 +62,11 @@ public class UIScript : MonoBehaviour
     }
 
     public void Hide()
-    {            
-        Object.SetActive(!Object.activeSelf);
+    {
+        content.items[content.getNum()].SetActive(!content.items[content.getNum()].activeSelf);
     }
 
-    public static void ModelSwitch()
+    /*public static void ModelSwitch()
     {
         if (num == 1)
         {
@@ -81,5 +80,5 @@ public class UIScript : MonoBehaviour
             objects[num-1].SetActive(true);
             num = 1;
         }
-    }
+    }*/
 }
