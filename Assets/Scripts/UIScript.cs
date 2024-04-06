@@ -6,7 +6,7 @@ using Vuforia;
 
 public class UIScript : MonoBehaviour
 {
-    private string btn;
+    public Vector3 dir;
     private bool canRotate;
     public GameObject Object;
     string path;
@@ -34,20 +34,19 @@ public class UIScript : MonoBehaviour
     {
         if (canRotate)
         {
-            if (btn.ToUpper().Equals("X"))
+           /* if (btn.ToUpper().Equals("X"))
             {
                 content.items[content.getNum()].transform.Rotate(Vector3.right * 10);
-            }
-            if (btn.ToUpper().Equals("Y"))
-            {
-                content.items[content.getNum()].transform.Rotate(Vector3.up * 10);
-            }
+            }*/
+            //if (btn.ToUpper().Equals("Y"))
+            //{
+                content.items[content.getNum()].transform.Rotate(dir * 10);
+            //}
         }
     }
 
-    public void RotateModel(string btn)
+    public void RotateModel()
     {
-        this.btn = btn;
         canRotate = true;
     }
 
