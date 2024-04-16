@@ -8,6 +8,8 @@ public class UIScript : MonoBehaviour
 {
     public Vector3 dir;
     private bool canRotate;
+    private bool canSize;
+    private float size = 0.2f;
     public GameObject Object;
     string path;
     public Content content;
@@ -43,11 +45,32 @@ public class UIScript : MonoBehaviour
                 content.items[content.getNum()].transform.Rotate(dir * 10);
             //}
         }
+
+        if (canSize)
+        {
+            content.items[content.getNum()].transform.localScale += new Vector3(size, size, size);
+        }
     }
 
     public void RotateModel()
     {
         canRotate = true;
+    }
+
+    public void SizeUpModel()
+    {
+        canSize = true;
+        size = 0.2f;
+    }
+    public void SizeDownModel()
+    {
+        canSize = true;
+        size = -0.2f;
+    }
+
+    public void stopSize()
+    {
+        canSize = false;
     }
 
     public void StopRotate()
