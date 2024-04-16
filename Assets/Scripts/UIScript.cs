@@ -78,6 +78,11 @@ public class UIScript : MonoBehaviour
         canRotate = false;
     }
 
+    public void changeColor()
+    {
+        content.items[content.getNum()].GetComponent<Renderer>().material.color = new Color(150, 150, 150);
+    }
+
     public void SceneLoader(int index)
     {
         SceneManager.LoadScene(index);
