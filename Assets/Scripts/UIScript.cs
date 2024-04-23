@@ -13,12 +13,14 @@ public class UIScript : MonoBehaviour
     public GameObject Object;
     string path;
     public Content content;
+    public FlexibleColorPicker picker;
     //private MeshRenderer mRenderer;
     //private ImageTargetBehaviour imageTarget;
     //private DefaultObserverEventHandler eventHandler;
 
     void Start()
     {
+        picker.color = content.items[content.getNum()].GetComponent<Renderer>().material.color;
         path = LoadImage.imagePath;
         //imageTarget = GameObject.FindWithTag("imageTag");
         //mRenderer = imageTarget.GetComponent<MeshRenderer>();
@@ -34,6 +36,7 @@ public class UIScript : MonoBehaviour
 
     void Update()
     {
+        content.items[content.getNum()].GetComponent<Renderer>().material.color = picker.color;
         if (canRotate)
         {
            /* if (btn.ToUpper().Equals("X"))
@@ -80,7 +83,7 @@ public class UIScript : MonoBehaviour
 
     public void changeColor()
     {
-        content.items[content.getNum()].GetComponent<Renderer>().material.color = new Color(150, 150, 150);
+        picker.gameObject.SetActive(!picker.gameObject.activeSelf);
     }
 
     public void SceneLoader(int index)
