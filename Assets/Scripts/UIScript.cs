@@ -39,14 +39,15 @@ public class UIScript : MonoBehaviour
         content.items[content.getNum()].GetComponent<Renderer>().material.color = picker.color;
         if (canRotate)
         {
-           /* if (btn.ToUpper().Equals("X"))
-            {
-                content.items[content.getNum()].transform.Rotate(Vector3.right * 10);
-            }*/
+            /* if (btn.ToUpper().Equals("X"))
+             {
+                 content.items[content.getNum()].transform.Rotate(Vector3.right * 10);
+             }*/
             //if (btn.ToUpper().Equals("Y"))
             //{
-                content.items[content.getNum()].transform.Rotate(dir * 10);
+            content.items[content.getNum()].transform.Rotate(dir * 10);
             //}
+            //Debug.Log("clicked model: " + content.items[content.getNum()]);
         }
 
         if (canSize)
