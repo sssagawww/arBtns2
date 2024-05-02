@@ -8,6 +8,7 @@ public class UIScript : MonoBehaviour
 {
     public Vector3 dir;
     private bool canRotate;
+    private bool canPaint = false;
     private bool canSize;
     private float size = 0.2f;
     public GameObject Object;
@@ -36,7 +37,12 @@ public class UIScript : MonoBehaviour
 
     void Update()
     {
-        //content.items[content.getNum()].GetComponent<Renderer>().material.color = picker.color;
+        if (canPaint)
+        {
+            GameObject _o = content.items[content.getNum()];
+            _o.GetComponent<Renderer>().material.color = picker.color;
+        }
+            
         if (canRotate)
         {
             /* if (btn.ToUpper().Equals("X"))
@@ -84,6 +90,7 @@ public class UIScript : MonoBehaviour
 
     public void changeColor()
     {
+        canPaint = !canPaint;
         picker.gameObject.SetActive(!picker.gameObject.activeSelf);
     }
 
