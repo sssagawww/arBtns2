@@ -36,7 +36,7 @@ public class UIScript : MonoBehaviour
 
     void Update()
     {
-        content.items[content.getNum()].GetComponent<Renderer>().material.color = picker.color;
+        //content.items[content.getNum()].GetComponent<Renderer>().material.color = picker.color;
         if (canRotate)
         {
             /* if (btn.ToUpper().Equals("X"))
