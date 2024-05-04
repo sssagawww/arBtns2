@@ -15,13 +15,22 @@ public class UIScript : MonoBehaviour
     string path;
     public Content content;
     public FlexibleColorPicker picker;
+    private Color defaultColor;
     //private MeshRenderer mRenderer;
     //private ImageTargetBehaviour imageTarget;
     //private DefaultObserverEventHandler eventHandler;
 
     void Start()
     {
-        picker.color = content.items[content.getNum()].GetComponent<Renderer>().material.color;
+        GameObject _o = content.items[content.getNum()];
+        for (int i = 0; i < _o.GetComponent<MeshRenderer>().materials.Length; i++)
+        {
+            if (_o.GetComponent<MeshRenderer>().materials[i].name.Equals(_o.name + " (Instance)"))
+            {
+                picker.color = _o.GetComponent<Renderer>().materials[i].color;
+            }
+        }
+        defaultColor = picker.color;
         path = LoadImage.imagePath;
         //imageTarget = GameObject.FindWithTag("imageTag");
         //mRenderer = imageTarget.GetComponent<MeshRenderer>();
@@ -40,7 +49,14 @@ public class UIScript : MonoBehaviour
         if (canPaint)
         {
             GameObject _o = content.items[content.getNum()];
-            _o.GetComponent<Renderer>().material.color = picker.color;
+            for (int i = 0; i < _o.GetComponent<MeshRenderer>().materials.Length; i++)
+            {
+                if(_o.GetComponent<MeshRenderer>().materials[i].name.Equals(_o.name + " (Instance)"))
+                {
+                    _o.GetComponent<MeshRenderer>().materials[i].color = picker.color;
+                }
+                Debug.Log("material of model: " + _o.GetComponent<MeshRenderer>().materials[i].name + " " + _o.name);
+            }
         }
             
         if (canRotate)
@@ -67,6 +83,20 @@ public class UIScript : MonoBehaviour
         canRotate = true;
     }
 
+    public void resetColor()
+    {
+        GameObject _o = content.items[content.getNum()];
+        for (int i = 0; i < _o.GetComponent<MeshRenderer>().materials.Length; i++)
+        {
+            if (_o.GetComponent<MeshRenderer>().materials[i].name.Equals(_o.name + " (Instance)"))
+            {
+               _o.GetComponent<MeshRenderer>().materials[i].color = defaultColor;
+            }
+        }
+        picker.color = defaultColor;
+        changeColor();
+    }
+
     public void SizeUpModel()
     {
         canSize = true;
@@ -90,6 +120,7 @@ public class UIScript : MonoBehaviour
 
     public void changeColor()
     {
+        setup();
         canPaint = !canPaint;
         picker.gameObject.SetActive(!picker.gameObject.activeSelf);
     }
@@ -102,6 +133,19 @@ public class UIScript : MonoBehaviour
     public void Hide()
     {
         content.items[content.getNum()].SetActive(!content.items[content.getNum()].activeSelf);
+    }
+
+    public void setup()
+    {
+        GameObject _o = content.items[content.getNum()];
+        for (int i = 0; i < _o.GetComponent<MeshRenderer>().materials.Length; i++)
+        {
+            if (_o.GetComponent<MeshRenderer>().materials[i].name.Equals(_o.name + " (Instance)"))
+            {
+                picker.color = _o.GetComponent<Renderer>().materials[i].color;
+            }
+        }
+        defaultColor = picker.color;
     }
 
     /*public static void ModelSwitch()
