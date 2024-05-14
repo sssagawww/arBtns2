@@ -17,7 +17,8 @@ public class UIScript : MonoBehaviour
     public FlexibleColorPicker picker;
     private Color defaultColor;
     //private MeshRenderer mRenderer;
-    //private ImageTargetBehaviour imageTarget;
+    public ImageTargetBehaviour imageTarget;
+    public Sprite myImage;
     //private DefaultObserverEventHandler eventHandler;
 
     void Start()
@@ -146,6 +147,11 @@ public class UIScript : MonoBehaviour
             }
         }
         defaultColor = picker.color;
+    }
+
+    public void pickUp()
+    {
+        //imageTarget.GetComponent<Image>().image = myImage;
     }
 
     /*public static void ModelSwitch()
