@@ -18,7 +18,7 @@ public class UIScript : MonoBehaviour
     private Color defaultColor;
     //private MeshRenderer mRenderer;
     public ImageTargetBehaviour imageTarget;
-    public Sprite myImage;
+    public Texture2D myImage;
     //private DefaultObserverEventHandler eventHandler;
 
     void Start()
@@ -78,6 +78,17 @@ public class UIScript : MonoBehaviour
             content.items[content.getNum()].transform.localScale += new Vector3(size, size, size);
         }
     }
+
+    public void changeImage()
+    {
+        VuImageTargetConfig imageTargetConfig = vuImageTargetConfigDefault();
+        imageTargetConfig.databasePath = "ARDeisgner.xml";
+        imageTargetConfig.targetName = "target1";
+
+        VuObserver* imageTargetObserver = { NULL };
+        vuEngineCreateImageTargetObserver(engine, &imageTargetObserver, imageTargetConfig, NULL);
+    }
+
 
     public void RotateModel()
     {
