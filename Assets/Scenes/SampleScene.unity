@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemNum: 4
-  content: {fileID: 0}
+  content: {fileID: 290884313}
 --- !u!114 &16357035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1199,7 +1199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemNum: 6
-  content: {fileID: 0}
+  content: {fileID: 290884313}
 --- !u!114 &567190175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2217,7 +2217,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1732173093}
   m_HandleRect: {fileID: 1732173092}
   m_Direction: 0
-  m_Value: 0.49999994
+  m_Value: 0.5
   m_Size: 0.28735632
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2399,7 +2399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemNum: 2
-  content: {fileID: 0}
+  content: {fileID: 290884313}
 --- !u!114 &883557530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2752,7 +2752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemNum: 1
-  content: {fileID: 0}
+  content: {fileID: 290884313}
 --- !u!114 &960616782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3311,7 +3311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemNum: 9
-  content: {fileID: 0}
+  content: {fileID: 290884313}
 --- !u!114 &1191243884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3548,7 +3548,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 290884315}
         m_TargetAssemblyTypeName: UIScript, Assembly-CSharp
         m_MethodName: resetColor
         m_Mode: 1
@@ -3717,7 +3717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemNum: 8
-  content: {fileID: 0}
+  content: {fileID: 290884313}
 --- !u!114 &1455876722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3807,7 +3807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemNum: 7
-  content: {fileID: 0}
+  content: {fileID: 290884313}
 --- !u!114 &1562882884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3897,7 +3897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemNum: 3
-  content: {fileID: 0}
+  content: {fileID: 290884313}
 --- !u!114 &1613008976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3987,7 +3987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemNum: 5
-  content: {fileID: 0}
+  content: {fileID: 290884313}
 --- !u!114 &1628282231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4621,7 +4621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemNum: 0
-  content: {fileID: 0}
+  content: {fileID: 290884313}
 --- !u!114 &1975600160
 MonoBehaviour:
   m_ObjectHideFlags: 0
