@@ -74,7 +74,7 @@ public class UIScript : MonoBehaviour
             }
         }
         picker.color = defaultColor;
-        changeColor();
+//        changeColor();
     }
 
     public void SizeUpModel()
