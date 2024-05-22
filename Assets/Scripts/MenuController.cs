@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using EasyUI.Toast;
 
 public class MenuController : MonoBehaviour
 {
@@ -36,5 +37,16 @@ public class MenuController : MonoBehaviour
     {
         BtnPanel.SetActive(true);
         instructionPanel.SetActive(false);
+    }
+    public void saveImg(Texture2D tex)
+    {
+        NativeGallery.SaveImageToGallery(tex, "Виртуальный дизайнер", "mark.png", (callback, path) =>
+        {
+            if (callback)
+            {
+                Debug.Log("saved");
+                Toast.Show("Сохранено в галерею");
+            }
+        });
     }
 }
