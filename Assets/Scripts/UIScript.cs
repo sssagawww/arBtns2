@@ -17,7 +17,6 @@ public class UIScript : MonoBehaviour
     private Color defaultColor;
     public ImageTargetBehaviour imageTarget;
     public Texture2D myImage;
-    //private DefaultObserverEventHandler eventHandler;
 
     void Start()
     {
